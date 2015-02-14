@@ -1,0 +1,18 @@
+{
+  "name": "memory-to-string",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:6to5/register test.js",
+    "build": "6to5 index.es6 > bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "should": "^5.0.0"
+  },
+  "dependencies": {
+    "lodash": "^3.2.0"
+  }
+}
