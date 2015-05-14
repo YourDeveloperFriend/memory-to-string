@@ -2,10 +2,11 @@
   "name": "memory-to-string",
   "version": "0.0.1",
   "description": "",
-  "main": "bin/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --compilers js:6to5/register test.js",
-    "build": "6to5 index.es6 > bin/index.js"
+    "test": "mocha --require babel-register.js",
+    "prepublish": "npm run build",
+    "build": "babel --stage 0 src/index.js > lib/index.js"
   },
   "author": "",
   "license": "ISC",

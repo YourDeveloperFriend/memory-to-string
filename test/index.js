@@ -1,6 +1,6 @@
 
 import 'should';
-import convertToFrontEnd, {getTabs, convertToFrontEndRaw} from './';
+import convertToFrontEnd, {getTabs, convertToFrontEndRaw} from '../src';
 
 describe('MemoryToString', function() {
   let complex = {
@@ -11,7 +11,7 @@ describe('MemoryToString', function() {
     }
   };
   let complexResult = '{\n  a: 5,\n  b: [\n    true,\n    \'happy\',\n' +
-    '    {\n      d: 3\n    }\n  ],\n  c: function () {\n    return 3;\n  }\n}';
+    '    {\n      d: 3\n    }\n  ],\n  c: function c() {\n    return 3;\n  }\n}';
   describe('getTabs', function() {
     it('should get one tab', function() {
       getTabs(1).should.equal('  ');
